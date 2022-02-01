@@ -1,41 +1,16 @@
 # Kubernetes Fundamentals 
 
-Following on from our previous lab, we will redeploy the pac man using Kubernetes objects. Kubernetes objects permit our application configuration to be described as code, expressed in `yaml` notation. 
+The exercises in this repository are designed for the [OpenShift Playground](https://developers.redhat.com/courses/explore-openshift/openshift-49-playground). Similar and extra content can be found at https://developers.redhat.com/learn
 
-In this repository, you will find Kubernetes objects that describe the Pacman application, in this lab will extend this application to include a Persistent Volume Claim for the database.
+## [Lab 1: Launch a containerised application](Lab%201/README.MD)
 
-## Preparation
-If you haven’t already, clone this code repository.
+Deploy the Pacman application using the OpenShift console.
 
-    git clone https://github.com/lijcam/k8s-fundamentals-1.git \
-        && cd k8s-fundamentals-1
- 
-Followed by connecting to your OpenShift cluster as the developer and create a new project.
+## [Lab 2: Kubernetes API Objects](Lab%202/README.MD)
 
-    oc login -u developer
-    oc new-project lab2
+Deploy the Pacman application using API objects.
 
-## Creating the Persistent Volume Claim
-The Persistent Volume Claim object already exists. Create the claim and OpenShift will allocate a Persistent Volume to our project.
+## [Challenge Lab: Persistent volume claim](Lab%203/README.MD)
 
-    oc apply -f mongo-pvc.yml
-
-We can view the status of the claim in the console in the Administrator view: Storage > PersistentVolumeClaims 
-
-## Modify the database deployment
-Modify our Pod Template for the database to include the volume, and a volumeMount for the container. [An example can be found in offical documentation](https://docs.openshift.com/container-platform/4.9/storage/understanding-persistent-storage.html#pvc-claims-as-volumes_understanding-persistent-storage) but make sure you set the following parameters correctly.
-
-1. In the container, volumeMounts section, the `mountPath` must be `/data/db/`
-2. In the volume section, `claimName` must match the name of the Persistent Volume Claim.
-## Deploy the database
-Create the mongo Deployment, and Service.
-
-    oc apply -f mongo-deployment.yml
-    oc apply -f mongo-service.yml
-
-## Deploy the Pacman application
-Use the existing Pacman Kubernetes objects to deploy the Pacman app.
-
-    oc apply -f pacman-deployment.yml
-    oc apply -f pacman-service.yml
-    oc apply -f pacman-route.yml
+Deploy the Pacman application using API objects.
+Include a Persistent Volume Claim with the mongo pod template.
