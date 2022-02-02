@@ -6,8 +6,7 @@ The challenge lab, builds on what we learned from the Kubernetes API objects lab
 
 If you haven’t already, set up your virtual console and clone this code repository.
 
-    mkdir projects
-    cd projects
+    cd /root
 
     git clone https://github.com/lijcam/k8s-fundamentals-1.git
     cd k8s-fundamentals-1/Lab\ 3

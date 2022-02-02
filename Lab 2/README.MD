@@ -1,15 +1,12 @@
 # Kubernetes API Objects
 
-Following on from our previous lab, we will redeploy the Pacman application using Kubernetes objects. Kubernetes objects permit our application configuration to be described as code. This 
-
-1. Storing our Application deployment in a version control system.
+Following on from our previous lab, we will redeploy the Pacman application using Kubernetes objects. Kubernetes objects permit our application configuration to be described as code. This means we can deploy our application to new clusters simply and also sets the conditions to develop patterns and templates for your team or organisation.
 
 ## 1. Preparation
 
 If you haven’t already, set up your virtual console and clone this code repository.
 
-    mkdir projects
-    cd projects
+    cd /root
 
     git clone https://github.com/lijcam/k8s-fundamentals-1.git
     cd k8s-fundamentals-1/Lab\ 2
