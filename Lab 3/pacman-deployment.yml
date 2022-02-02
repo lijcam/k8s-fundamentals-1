@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: pacman
-          image: quay.io/lijcam/pacman:latest
+          image: quay.io/lijcam/pacman:v1
           ports:
             - containerPort: 8080
               protocol: TCP

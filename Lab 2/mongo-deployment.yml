@@ -22,7 +22,7 @@ spec:
         app: mongo
     spec:
       containers:
-      - image: quay.io/lijcam/mongo:latest
+      - image: quay.io/lijcam/mongo:v1
         name: mongo
         ports:
           - name: mongo
