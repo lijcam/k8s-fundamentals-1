@@ -9,11 +9,11 @@ In this exercise, we will deploy the Pacman application using just the OpenShift
 ![](static/topology.png)
 
 
+In the playground virtual terminal, click the link to the Web Console.
+
+![](static/login.png)
+
 ## 1. Create the project
-
-In the lab virtual terminal, we find the link to the OpenShift console by typing:
-
-    oc whoami --show-console
 
 Log into the console with the `developer` user and create a new project by clicking on `create a new project`.
 
